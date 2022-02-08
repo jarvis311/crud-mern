@@ -5,6 +5,7 @@ import Add from './Components/Add';
 import { BrowserRouter, Route,  Routes } from 'react-router-dom';
 import Home from './Components/Home';
 import AddUsers from './Components/AddUsers';
+import EditUsers from './Components/EditUsers';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
               <Route path='/' element= {<Home />} /> 
               <Route path='/add' element= {<Add />} /> 
               <Route path='/addUser' element= {<AddUsers />} /> 
+              <Route path='/editUser/:id' element= {<EditUsers />} /> 
+
               
            
             </Routes>

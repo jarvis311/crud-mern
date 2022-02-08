@@ -1,9 +1,10 @@
-import React,{useState} from 'react';
-import { addUsers } from '../Service/Api';
-
+import React, {useState, useEffect} from 'react';
+import { useParams , useNavigate} from 'react-router-dom';
+import { getUsers , editUser} from '../Service/Api';
+import { Link } from 'react-router-dom';
 
 const initialValue = {
-    id: '',
+   
     name : '',
     role : '',
     team : '',
@@ -12,11 +13,23 @@ const initialValue = {
 } 
 
 
-
-const AddUsers = () => {
-
+const EditUsers = () => {
+    
     const [user, setuser] = useState(initialValue);
-    const {id, name, role, team, email, phone } = user;
+    const { name, role, team, email, phone } = user;
+    useEffect(() => {
+        loadUserData();
+      
+      },[]);
+    const {id} = useParams();
+      
+          
+    const loadUserData = async () =>{
+        const response = await getUsers(id);
+        setuser(response.data);
+    }
+    let history = useNavigate();
+
 
     const onValueChange = (e) => {
             console.log(e.target.value);
@@ -25,23 +38,26 @@ const AddUsers = () => {
     }
 
 
-    const addUsersDetails = async () =>{
-            await addUsers(user);
+    const editUserDetails = async() => {
+        const response = await editUser(id, user);
+        history.push('/all');
     }
+        
+     
 
 
-    return (
+  return (
 
 
-        <>
-
+            <>
+            
             <form className='form'>
                 <div>
-                    <h1>Add The Player</h1><hr />
+                    <h1>Edit The Details</h1><hr />
                 </div>
                 <div className="mb-3 ">
                     <label htmlFor="id" className="form-label">Ente the Id</label>
-                    <input type="number" name='id' className="form-control" onChange={(e) => onValueChange(e)} value={id}  id="id" aria-describedby="emailHelp" />
+                    <input type="text" name='id' className="form-control" onChange={(e) => onValueChange(e)} value={id}  id="id" aria-describedby="emailHelp" />
                 </div>
                 <div className="mb-3 ">
                     <label htmlFor="name" className="form-label">Enter the Name</label>
@@ -65,14 +81,20 @@ const AddUsers = () => {
                 </div>
                
                
-                <button type="submit" className="btn btn-primary" onClick={() => addUsersDetails() }>Submit</button>
+                <Link className='btn btn-prinary' to='/add'><button  type="submit" onClick={() => editUserDetails() } className='btn btn-primary'>Submit</button></Link>
             </form>
 
 
 
 
-        </>
-    )
+            
+            
+            </>
+
+
+
+
+  )
 };
 
-export default AddUsers;
+export default EditUsers;
