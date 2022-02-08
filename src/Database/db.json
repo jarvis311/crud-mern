@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Virat Kohli",
+      "role": "Batsman",
+      "team": "India",
+      "email": "viratk@gmail.com",
+      "phone": "412563987"
+    },
+    {
+      "id": 2,
+      "name": "Ms Dhoni",
+      "role": "Captain",
+      "team": "India",
+      "email": "msd@gmail.com",
+      "phone": "741258963"
+    },
+    {
+      "id": 3,
+      "name": "Rohit Sharma",
+      "role": "batsman",
+      "team": "India",
+      "email": "rohit45@gmail.com",
+      "phone": "85421369"
+    },
+    {
+      "id": "6",
+      "name": "kl",
+      "role": "bat",
+      "team": "ind",
+      "email": "kl@g.com",
+      "phone": "741258963"
+    }
+  ]
+}
