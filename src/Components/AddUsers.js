@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import { addUsers } from '../Service/Api';
-
+import {Link} from 'react-router-dom';
 
 const initialValue = {
     id: '',
@@ -30,12 +30,15 @@ const AddUsers = () => {
     }
 
 
+  
+
+
     return (
 
 
         <>
 
-            <form className='form'>
+            <form className='form myForm' >
                 <div>
                     <h1>Add The Player</h1><hr />
                 </div>
@@ -60,12 +63,12 @@ const AddUsers = () => {
                     <input type="email" name='email' className="form-control" onChange={(e) => onValueChange(e)} value={email}  id="email" aria-describedby="emailHelp" />
                 </div>
                 <div className="mb-3 ">
-                    <label htmlFor="phone" className="form-label">Enter the Email</label>
+                    <label htmlFor="phone" className="form-label">Enter the Phnone Number</label>
                     <input type="text" name='phone' className="form-control" onChange={(e) => onValueChange(e)} value={phone} id="phone" aria-describedby="emailHelp" />
                 </div>
                
                
-                <button type="submit" className="btn btn-primary" onClick={() => addUsersDetails() }>Submit</button>
+                <Link to="/add"> <input type="submit" className="btn btn-primary" onClick={() => addUsersDetails() } /> </Link>
             </form>
 
 

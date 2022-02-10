@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { React,useState} from 'react';
 import { Link } from 'react-router-dom';
 
 
@@ -25,7 +25,7 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to='/addUser'>Add-User</Link>
+                <Link className="nav-link" to='/addUser'>AddUser</Link>
               </li>
 
         
@@ -33,6 +33,7 @@ const Navbar = () => {
             <form className="d-flex">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
               <button className="btn btn-outline-success" type="submit">Search</button>
+        
             </form>
           </div>
         </div>

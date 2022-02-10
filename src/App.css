@@ -10,3 +10,10 @@
   width: 20%;
   margin: 5rem auto;
 }
+
+.search{
+  width: 30vw;
+  height: 6vh;
+  display: flex;
+  margin-left: 29rem;
+}

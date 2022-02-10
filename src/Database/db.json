@@ -31,6 +31,46 @@
       "team": "India",
       "email": "klrahul1@gmail.com",
       "phone": "123456789"
+    },
+    {
+      "id": "5",
+      "name": "Rishab Panth",
+      "role": "wicket Keeper",
+      "team": "India",
+      "email": "rb@gmail.com",
+      "phone": "456871236"
+    },
+    {
+      "id": "6",
+      "name": "Bhuvnesver",
+      "role": "bowler",
+      "team": "India",
+      "email": "bhuvi@gmail.com",
+      "phone": "45615975"
+    },
+    {
+      "id": "7",
+      "name": "Jasprit Bhumrah",
+      "role": "Bowler",
+      "team": "India",
+      "email": "jb10@gmail.com",
+      "phone": "159753456"
+    },
+    {
+      "id": "8",
+      "name": "Pat cumics",
+      "role": "Bowler",
+      "team": "Australia",
+      "email": "pat@gmail.com",
+      "phone": "785412368"
+    },
+    {
+      "id": "9",
+      "name": "James Andreson",
+      "role": "Bowler",
+      "team": "England",
+      "email": "jimmya9@gmail.com",
+      "phone": "456987123"
     }
   ]
 }
